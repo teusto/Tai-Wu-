@@ -3,7 +3,7 @@ const { cosmiconfigSync } = require('cosmiconfig');
 const schema = require('./schema.json');
 const betterAjvErrors = require('better-ajv-errors');
 const Ajv = require('ajv').default;
-const ajv = new Ajv({ jsonPointers: true });
+const ajv = new Ajv({ jsPropertySyntax: true });
 const configLoader = cosmiconfigSync('tool');
 
 module.exports = function getConfig() {
